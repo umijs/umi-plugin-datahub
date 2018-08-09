@@ -1,7 +1,6 @@
 {
   "name": "umi-plugin-datahub",
-  "version": "2.0.0",
-  "main": "./lib/index.js",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/umijs/umi/tree/master/packages/umi-plugin-datahub"
@@ -13,10 +12,6 @@
   "bugs": {
     "url": "https://github.com/umijs/umi/issues"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
   "dependencies": {
     "datahub-proxy-middleware": "^1.0.9",
     "macaca-datahub": "2"

@@ -1,12 +1,14 @@
-import { join } from 'path';
-import DataHub from 'macaca-datahub';
-import datahubMiddleware from 'datahub-proxy-middleware';
+'use strict';
+
+const path = require('path');
+const DataHub = require('macaca-datahub');
+const datahubMiddleware = require('datahub-proxy-middleware');
 
 export default (api, opts = {}) => {
   const datahubConfig = {
     port: 5678,
     hostname: '127.0.0.1',
-    store: join(__dirname, 'data'),
+    store: path.join(__dirname, 'data'),
     proxy: {},
     showBoard: false,
     ...opts,

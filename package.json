@@ -12,10 +12,6 @@
   "bugs": {
     "url": "https://github.com/umijs/umi/issues"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
   "dependencies": {
     "datahub-proxy-middleware": "^1.0.9",
     "macaca-datahub": "2"

@@ -2,7 +2,7 @@ const path = require('path');
 const DataHub = require('macaca-datahub');
 const datahubMiddleware = require('datahub-proxy-middleware');
 
-export default (api, opts = {}) => {
+module.exports = (api, opts = {}) => {
   const datahubConfig = {
     port: 5678,
     hostname: '127.0.0.1',

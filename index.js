@@ -16,7 +16,7 @@ module.exports = (api, opts = {}) => {
     port: datahubConfig.port,
   });
 
-  api.register('beforeServerWithApp', ({ args: { app } }) => {
+  api.register('beforeDevServer', ({ args: { app } }) => {
     datahubMiddleware(app)(datahubConfig);
     defaultDatahub.startServer(datahubConfig).then(() => {
       console.log('datahub ready');

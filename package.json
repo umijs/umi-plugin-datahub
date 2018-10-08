@@ -15,5 +15,8 @@
   "dependencies": {
     "datahub-proxy-middleware": "^1.0.9",
     "macaca-datahub": "2"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }

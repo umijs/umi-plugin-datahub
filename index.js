@@ -19,7 +19,7 @@ module.exports = (api, opts = {}) => {
 
   debug('datahubConfig');
   debug(datahubConfig);
-  api.beforeDevServer(({ server: { app } }) => {
+  api._beforeServerWithApp(({ app }) => {
     datahubMiddleware(app)(datahubConfig);
     defaultDatahub.startServer(datahubConfig).then(() => {
       debug('datahub ready');

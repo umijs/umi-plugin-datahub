@@ -3,18 +3,24 @@
   "version": "3.0.0-beta.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi/tree/master/packages/umi-plugin-datahub"
+    "url": "https://github.com/umijs/umi-plugin-datahub"
   },
-  "homepage": "https://github.com/umijs/umi/tree/master/packages/umi-plugin-datahub",
+  "homepage": "https://github.com/umijs/umi-plugin-datahub",
   "authors": [
     "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
   ],
   "bugs": {
-    "url": "https://github.com/umijs/umi/issues"
+    "url": "https://github.com/umijs/umi-plugin-datahub/issues"
+  },
+  "scripts": {
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
   },
   "dependencies": {
     "datahub-proxy-middleware": "^1.0.9",
     "macaca-datahub": "2"
+  },
+  "devDependencies": {
+    "np": "^4.0.2"
   },
   "files": [
     "index.js"

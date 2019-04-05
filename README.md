@@ -43,11 +43,23 @@ export default {
 };
 ```
 
-Checkout [macaca-datahub](//github.com/macacajs/macaca-datahub#configuration) for more options.
+Checkout [macaca-datahub](//macacajs.github.io/macaca-datahub/zh/guide/) for more options.
 
 ## Example
 
 - [umi-examples](//github.com/umijs/umi-examples/tree/master/eleme-demo)
+
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/35128?v=4" width="100px;"/><br/><sub><b>sorrycc</b></sub>](https://github.com/sorrycc)<br/>|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars2.githubusercontent.com/u/1134658?v=4" width="100px;"/><br/><sub><b>tudou527</b></sub>](https://github.com/tudou527)<br/>|
+| :---: | :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Fri Apr 05 2019 17:28:24 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
 
 ## LICENSE
 

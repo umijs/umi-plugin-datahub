@@ -13,13 +13,15 @@
     "url": "https://github.com/umijs/umi-plugin-datahub/issues"
   },
   "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "contributor": "git-contributor"
   },
   "dependencies": {
     "datahub-proxy-middleware": "^1.0.9",
     "macaca-datahub": "2"
   },
   "devDependencies": {
+    "git-contributor": "1",
     "np": "^4.0.2"
   },
   "files": [

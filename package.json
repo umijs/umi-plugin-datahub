@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "datahub-proxy-middleware": "^2.0.2",
-    "macaca-datahub": "2"
+    "macaca-datahub": "2",
+    "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
     "git-contributor": "1",

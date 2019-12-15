@@ -23,6 +23,18 @@ module.exports = (api, opts = {}) => {
   debug('datahubConfig');
   debug(datahubConfig);
 
+  // register datahub args for dev command if integrated in Bigfish
+  if (isBigfish) {
+    api._modifyHelpInfo(memo => {
+      memo.commands.dev.opts.options = {
+        ...(memo.commands.dev.opts.options || {}),
+        '--datahub': 'start dev server & datahub server at the same time',
+      };
+
+      return memo;
+    });
+  }
+
   if (!isBigfish || args.datahub) {
     api._beforeServerWithApp(({ app }) => {
       datahubMiddleware(app)(datahubConfig);

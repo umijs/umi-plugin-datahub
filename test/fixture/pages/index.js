@@ -7,6 +7,7 @@ export default class extends React.Component {
     super(props);
     this.state = {
       title: 'doing request...',
+      loading: true,
     };
   }
 
@@ -21,6 +22,7 @@ export default class extends React.Component {
       .then(res => {
         this.setState({
           title: `value from mock: ${res.foo}`,
+          loading: false,
         })
       });
   }
@@ -28,7 +30,9 @@ export default class extends React.Component {
   render() {
     return (
       <div className={styles.normal}>
-        <p>{this.state.title}</p>
+        {!this.state.loading && (
+          <p>{this.state.title}</p>
+        )}
       </div>
     );
   }

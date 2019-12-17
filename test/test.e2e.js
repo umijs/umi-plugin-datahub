@@ -1,8 +1,9 @@
 const path = require('path');
 const { fork } = require('child_process');
 const puppeteer = require('puppeteer');
+const DataHubSDK = require('datahub-nodejs-sdk');
 
-const mockData = require('./fixture/data/hubname/hubname_ALL_api#test1/scene/default');
+const sdkClient = new DataHubSDK();
 const port = 7788;
 let browser, page, child;
 
@@ -52,5 +53,11 @@ test('page should fetch data successfully from datahub', async () => {
   const text = await page.evaluate(
     () => document.querySelector('p').innerHTML,
   );
-  expect(new RegExp(`${mockData.data.foo}$`).test(text)).toBeTruthy();
+  const { data } = await sdkClient.getSceneData({
+    hub: 'hubname',
+    pathname: 'api/test1',
+    scene: 'default',
+  });
+
+  expect(new RegExp(`${data.foo}$`).test(text)).toBeTruthy();
 });

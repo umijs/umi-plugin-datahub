@@ -16,19 +16,25 @@
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
     "lint": "eslint . --fix",
+    "test": "umi-test",
     "contributor": "git-contributor"
   },
   "dependencies": {
     "datahub-proxy-middleware": "2",
-    "macaca-datahub": "2"
+    "macaca-datahub": "2",
+    "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
+    "datahub-nodejs-sdk": "^2.2.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
     "git-contributor": "1",
-    "np": "^5.2.1"
+    "np": "^5.2.1",
+    "puppeteer": "^2.0.0",
+    "umi": "^2.12.6",
+    "umi-test": "^1.9.0"
   },
   "files": [
     "index.js"

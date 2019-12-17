@@ -8,6 +8,4 @@ install:
   - npm i npminstall && npminstall
 script:
   - npm run lint
-  - cd test/fixture
-  - npm i
-  - npm run dev & sleep 3
+  - npm test

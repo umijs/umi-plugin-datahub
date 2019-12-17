@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const DataHub = require('macaca-datahub');
 const datahubMiddleware = require('datahub-proxy-middleware');

@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+node_js:
+  - '8'
+cache:
+  npm: false
+install:
+  - npm i npminstall && npminstall
+script:
+  - npm run lint
+  - cd test/fixture
+  - npm i
+  - npm run dev & ; sleep 3

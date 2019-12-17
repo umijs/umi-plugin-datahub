@@ -7,23 +7,29 @@
   },
   "homepage": "https://github.com/umijs/umi-plugin-datahub",
   "authors": [
-    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)",
+    "xudafeng <dafeng.xdf@gmail.com> (https://github.com/xudafeng)"
   ],
   "bugs": {
     "url": "https://github.com/umijs/umi-plugin-datahub/issues"
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "lint": "eslint . --fix",
     "contributor": "git-contributor"
   },
   "dependencies": {
-    "datahub-proxy-middleware": "^2.0.2",
+    "datahub-proxy-middleware": "2",
     "macaca-datahub": "2",
     "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-react": "^7.14.3",
     "git-contributor": "1",
-    "np": "^4.0.2"
+    "np": "^5.2.1"
   },
   "files": [
     "index.js"

@@ -2,6 +2,20 @@
 
 ---
 
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![node version][node-image]][node-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/umi-plugin-datahub.svg?style=flat-square&logo=npm
+[npm-url]: https://npmjs.org/package/umi-plugin-datahub
+[travis-image]: https://img.shields.io/travis/umijs/umi-plugin-datahub.svg?style=flat-square&logo=travis
+[travis-url]: https://travis-ci.org/umijs/umi-plugin-datahub
+[node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square&logo=node.js
+[node-url]: http://nodejs.org/download/
+[download-image]: https://img.shields.io/npm/dm/umi-plugin-datahub.svg?style=flat-square&logo=npm
+[download-url]: https://npmjs.org/package/umi-plugin-datahub
+
 umi plugin for integrating [macaca-datahub](//github.com/macacajs/macaca-datahub), which is a GUI-style mock tool that can be used to replace umi's built-in mock solution.
 
 <div align="center">

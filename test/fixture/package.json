@@ -1,1 +1,8 @@
-{}
+{
+  "devDependencies": {
+    "umi": "2"
+  },
+  "scripts": {
+    "dev": "umi dev"
+  }
+}

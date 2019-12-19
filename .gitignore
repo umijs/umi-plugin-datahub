@@ -3,3 +3,5 @@ yarn.lock
 .umi
 .umi-production
 *.sw*
+lib
+dist

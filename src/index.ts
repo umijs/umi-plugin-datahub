@@ -1,4 +1,3 @@
-'use strict';
 import * as path from 'path';
 import { IApi } from 'umi-types';
 import DataHub from 'macaca-datahub';
@@ -19,6 +18,7 @@ export default (api: IApi, opts = {}) => {
     port: datahubConfig.port,
   });
 
+
   debug('datahubConfig');
   debug(datahubConfig);
   api._beforeServerWithApp(({ app }) => {
@@ -27,6 +27,18 @@ export default (api: IApi, opts = {}) => {
       debug('datahub ready');
       console.log('datahub ready');
     });
+  });
+
+  api.onUISocket(({ action, failure, success, send }) => {
+    const { type, payload = {}, lang } = action;
+    switch (type) {
+      case 'org.umi.datahub.getPort': {
+        success({ port: datahubConfig.port });
+        break;
+      }
+      default:
+        break;
+    }
   });
 
   // add UI

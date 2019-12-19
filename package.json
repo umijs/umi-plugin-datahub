@@ -36,6 +36,7 @@
     "@ant-design/icons": "^4.0.0-alpha.11",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "antd": "^4.0.0-beta.0",
     "babel-eslint": "^10.0.3",
     "datahub-nodejs-sdk": "^2.2.1",
     "eslint": "^6.4.0",

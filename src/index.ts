@@ -1,10 +1,10 @@
 'use strict';
+import * as path from 'path';
+import { IApi } from 'umi-types';
+import DataHub from 'macaca-datahub';
+import datahubMiddleware from 'datahub-proxy-middleware';
 
-const path = require('path');
-const DataHub = require('macaca-datahub');
-const datahubMiddleware = require('datahub-proxy-middleware');
-
-module.exports = (api, opts = {}) => {
+export default (api: IApi, opts = {}) => {
   const { debug } = api;
   const datahubConfig = {
     port: 5678,
@@ -28,4 +28,7 @@ module.exports = (api, opts = {}) => {
       console.log('datahub ready');
     });
   });
+
+  // add UI
+  api.addUIPlugin(require.resolve('../dist/index.umd'));
 };

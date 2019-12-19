@@ -14,7 +14,6 @@
     "url": "https://github.com/umijs/umi-plugin-datahub/issues"
   },
   "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish",
     "lint": "eslint . --fix",
     "test": "umi-test",
     "contributor": "git-contributor"

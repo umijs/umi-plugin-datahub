@@ -9,8 +9,7 @@ export interface TestProps {
 }
 
 const Test: React.SFC<TestProps> = props => {
-  console.log('props', props);
-  const { callRemote } = props.api;
+  const { callRemote, getLocale } = props.api;
   const [port, setPort] = React.useState();
   const [loading, setLoading] = React.useState(true);
 
@@ -19,7 +18,6 @@ const Test: React.SFC<TestProps> = props => {
       const { port } = await callRemote({
         type: 'org.umi.datahub.getPort',
       })
-      console.log('port ready', port);
       setPort(port);
     }
     getPort();
@@ -29,11 +27,13 @@ const Test: React.SFC<TestProps> = props => {
     setLoading(false);
   }
 
+  const locale = getLocale();
+
   return (
     <div className={styles.spin} style={{ height: '100%' }}>
       <Spin spinning={loading}>
         {port &&
-          <iframe onLoad={onIframeReady} src={`http://127.0.0.1:${port}/dashboard`} width="100%" height="100%" frameBorder="0"></iframe>
+          <iframe onLoad={onIframeReady} src={`http://127.0.0.1:${port}/dashboard?locale=${locale}`} width="100%" height="100%" frameBorder="0"></iframe>
         }
      </Spin>
     </div>

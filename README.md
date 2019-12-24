@@ -87,13 +87,20 @@ Checkout [macaca-datahub](//macacajs.github.io/macaca-datahub/guide/) for more o
 
 ## Development
 
+Debug Plugin
+
+```bash
+$ cd test/fixture
+$ npm run dev
+```
+
 Debug UI
 
 ```bash
 # watch build
 $ npm run build -- -w
 $ cd test/fixture
-$ npm run dev
+$ npm run dev:ui
 ```
 
 ## Example

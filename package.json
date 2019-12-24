@@ -52,7 +52,7 @@
     "umi-types": "^0.5.9"
   },
   "files": [
-    "lib",
+    "index.js",
     "dist"
   ]
 }

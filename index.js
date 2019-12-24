@@ -28,4 +28,19 @@ module.exports = (api, opts = {}) => {
       console.log('datahub ready');
     });
   });
+
+  api.onUISocket(({ action, success }) => {
+    const { type } = action;
+    switch (type) {
+      case 'org.umi.datahub.getPort': {
+        success({ port: datahubConfig.port });
+        break;
+      }
+      default:
+        break;
+    }
+  });
+
+  // add UI
+  api.addUIPlugin(require.resolve('./dist/index.umd'));
 };

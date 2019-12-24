@@ -56,6 +56,25 @@ export default {
 
 更多配置见：[macaca-datahub](//macacajs.github.io/macaca-datahub/zh/guide/)
 
+## 开发
+
+调试插件
+
+```bash
+$ cd test/fixture
+$ npm run dev
+```
+
+调试 UI
+
+```bash
+# watch build
+$ npm run build -- -w
+$ cd test/fixture
+$ npm run dev:ui
+```
+
+
 ## 工程示例
 
 - [umi-examples](//github.com/umijs/umi-examples/tree/master/eleme-demo)

@@ -8,4 +8,5 @@ install:
   - npm i npminstall && npminstall
 script:
   - npm run lint
+  - npm run build
   - npm test

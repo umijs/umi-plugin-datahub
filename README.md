@@ -85,6 +85,24 @@ export default {
 
 Checkout [macaca-datahub](//macacajs.github.io/macaca-datahub/guide/) for more options.
 
+## Development
+
+Debug Plugin
+
+```bash
+$ cd test/fixture
+$ npm run dev
+```
+
+Debug UI
+
+```bash
+# watch build
+$ npm run build -- -w
+$ cd test/fixture
+$ npm run dev:ui
+```
+
 ## Example
 
 - [umi-examples](//github.com/umijs/umi-examples/tree/master/eleme-demo)

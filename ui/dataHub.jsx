@@ -1,14 +1,9 @@
 import React from 'react';
 import { Spin } from 'antd';
-import { IUiApi } from 'umi-types';
 import styles from './dataHub.module.less';
 
 
-export interface TestProps {
-  api: IUiApi;
-}
-
-const Test: React.SFC<TestProps> = props => {
+const DataHub = props => {
   const { callRemote, getLocale } = props.api;
   const [port, setPort] = React.useState();
   const [loading, setLoading] = React.useState(true);
@@ -40,4 +35,4 @@ const Test: React.SFC<TestProps> = props => {
   );
 };
 
-export default Test;
+export default DataHub;

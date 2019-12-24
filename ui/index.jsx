@@ -1,8 +1,7 @@
 import React from 'react';
-import { IUiApi } from 'umi-types';
 import DataHub from './dataHub';
 
-export default (api: IUiApi) => {
+export default api => {
   api.addPanel({
     title: 'DataHub',
     path: '/datahub',

@@ -4,7 +4,7 @@ export default [
     disableTypeCheck: true,
   },
   {
-    entry: 'ui/index.tsx',
+    entry: 'ui/index.jsx',
     disableTypeCheck: true,
     typescriptOpts: {
       check: false,

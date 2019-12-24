@@ -1,11 +1,8 @@
 import * as path from 'path';
-import { IApi } from 'umi-types';
 import DataHub from 'macaca-datahub';
 import datahubMiddleware from 'datahub-proxy-middleware';
 
-export default (api: IApi, opts = {}) => {
-  // whether enable umi ui
-  const enableUI = process.env.UMI_UI;
+export default (api, opts = {}) => {
   const { debug } = api;
   const datahubConfig = {
     port: 5678,

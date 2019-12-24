@@ -42,5 +42,5 @@ module.exports = (api, opts = {}) => {
   });
 
   // add UI
-  api.addUIPlugin(require.resolve('../dist/index.umd'));
+  api.addUIPlugin(require.resolve('./dist/index.umd'));
 };

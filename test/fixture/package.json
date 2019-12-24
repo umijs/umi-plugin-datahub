@@ -3,6 +3,7 @@
     "umi": "2"
   },
   "scripts": {
-    "dev": "UMI_UI=1 umi dev"
+    "dev": "umi dev",
+    "dev:ui": "UMI_UI=1 umi dev"
   }
 }

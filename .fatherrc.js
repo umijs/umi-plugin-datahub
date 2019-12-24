@@ -1,9 +1,5 @@
 export default [
   {
-    cjs: 'babel',
-    disableTypeCheck: true,
-  },
-  {
     entry: 'ui/index.jsx',
     disableTypeCheck: true,
     typescriptOpts: {

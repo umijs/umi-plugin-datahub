@@ -1,8 +1,8 @@
-import * as path from 'path';
-import DataHub from 'macaca-datahub';
-import datahubMiddleware from 'datahub-proxy-middleware';
+const path = require('path');
+const DataHub = require('macaca-datahub');
+const datahubMiddleware = require('datahub-proxy-middleware');
 
-export default (api, opts = {}) => {
+module.exports = (api, opts = {}) => {
   const { debug } = api;
   const datahubConfig = {
     port: 5678,

@@ -1,0 +1,74 @@
+'use strict';
+
+const path = require('path');
+const assert = require('assert');
+const { fork } = require('child_process');
+const puppeteer = require('puppeteer');
+const DataHubSDK = require('datahub-nodejs-sdk');
+
+const sdkClient = new DataHubSDK();
+const port = 7788;
+let browser, page, child;
+
+describe('./test/launch.test.js', () => {
+  before(async () => {
+    // start umi dev server
+    child = fork(
+      path.join(__dirname, '../node_modules/umi/bin/umi.js'),
+      [
+        'dev',
+        '--port',
+        port,
+        '--cwd',
+        path.join(__dirname, './fixture'),
+      ],
+      {
+        env: {
+          ...process.env,
+          BROWSER: 'none',
+          PROGRESS: 'none',
+          UMI_UI: 'none',
+          UMI_UI_SERVER: 'none',
+        },
+        silent: true,
+      },
+    );
+  
+    // create browser
+    browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+    
+    // wait for dev server ready
+    await new Promise((resolve) => {
+      child.on('message', (arg) => {
+        if (arg.type === 'DONE') {
+          resolve();
+        }
+      });
+    });
+  });
+  
+  beforeEach(async () => {
+    page = await browser.newPage();
+  });
+  
+  after(() => {
+    browser.close();
+    child.kill('SIGINT');
+  });
+
+  it('page should fetch data successfully from datahub', async () => {
+    await page.goto(`http://localhost:${port}`);
+    await page.waitForSelector('p');
+  
+    const text = await page.evaluate(
+      () => document.querySelector('p').innerHTML,
+    );
+    const { data } = await sdkClient.getSceneData({
+      hub: 'hubname',
+      pathname: 'api/test1',
+      scene: 'default',
+    });
+
+    assert(new RegExp(`${data.foo}$`).test(text));
+  });
+});

@@ -28,8 +28,8 @@ export default (api, opts = {}) => {
     });
   });
 
-  api.onUISocket(({ action, failure, success, send }) => {
-    const { type, payload = {}, lang } = action;
+  api.onUISocket(({ action, success }) => {
+    const { type } = action;
     switch (type) {
       case 'org.umi.datahub.getPort': {
         success({ port: datahubConfig.port });

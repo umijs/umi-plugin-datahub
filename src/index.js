@@ -1,3 +1,5 @@
+'use strict';
+
 const path = require('path');
 const DataHub = require('macaca-datahub');
 const datahubMiddleware = require('datahub-proxy-middleware');
@@ -16,7 +18,6 @@ module.exports = (api, opts = {}) => {
   const defaultDatahub = new DataHub({
     port: datahubConfig.port,
   });
-
 
   debug('datahubConfig');
   debug(datahubConfig);

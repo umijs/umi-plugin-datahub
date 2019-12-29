@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-datahub",
-  "version": "4.0.0-beta.1",
+  "version": "4.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/umijs/umi-plugin-datahub"
@@ -38,14 +38,12 @@
     "@types/react-dom": "^16.9.4",
     "@umijs/fabric": "^1.2.12",
     "antd": "^4.0.0-beta.0",
-    "datahub-nodejs-sdk": "^2.2.1",
-    "father-build": "^1.17.1",
-    "git-contributor": "1",
-    "np": "^5.2.1",
     "babel-eslint": "^10.0.3",
+    "datahub-nodejs-sdk": "^2.2.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
+    "father-build": "^1.17.1",
     "git-contributor": "1",
     "mocha": "^6.2.2",
     "np": "^5.2.1",

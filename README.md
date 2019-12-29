@@ -103,6 +103,14 @@ $ cd test/fixture
 $ npm run dev:ui
 ```
 
+<div align="center">
+  <img src="./screenshots/1.png" width="75%" />
+</div>
+
+<div align="center">
+  <img src="./screenshots/2.png" width="75%" />
+</div>
+
 ## Example
 
 - [umi-examples](//github.com/umijs/umi-examples/tree/master/eleme-demo)

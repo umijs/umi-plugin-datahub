@@ -25,11 +25,15 @@
     "antd": "4.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "umi": "2.x || ^2.9.0-0"
+    "umi": "3.x"
   },
   "dependencies": {
     "datahub-proxy-middleware": "3",
+    "debugger-board": "^2.0.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.21.0",
     "macaca-datahub": "3",
+    "path-to-regexp": "0.1.7",
     "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
@@ -48,7 +52,7 @@
     "mocha": "^6.2.2",
     "np": "^5.2.1",
     "puppeteer": "^2.0.0",
-    "umi": "^2.12.6"
+    "umi": "3.x"
   },
   "files": [
     "index.js",

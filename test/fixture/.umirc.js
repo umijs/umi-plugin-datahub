@@ -1,14 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  plugins: [
-    ['../../', {
-      proxy: {
-        '^/api': {
-          hub: 'hubname',
-        },
+  plugins: ['../../'],
+  datahub: {
+    proxy: {
+      '^/api': {
+        hub: 'hubname',
       },
-      store: path.join(__dirname, 'data'),
-    }],
-  ],
+    },
+    store: path.join(__dirname, 'data'),
+  },
 }

@@ -53,16 +53,7 @@ Install it via npm or yarn,
 ```bash
 $ npm i umi-plugin-datahub -D
 ```
-
-Configure and import this plugin in `.umirc.js`,
-
-```js
-export default {
-  plugins: [
-    'umi-plugin-datahub',
-  ],
-};
-```
+Umi will load this plugin automatically from `package.json`.
 
 ## Options
 
@@ -70,16 +61,14 @@ We can specify options for macaca-datahub, such as proxy and store.
 
 ```javascript
 export default {
-  plugins: [
-    ['umi-plugin-datahub', {
-      proxy: {
-        '^/api': {
-          hub: 'hubname',
-        },
+  datahub: {
+    proxy: {
+      '^/api': {
+        hub: 'hubname',
       },
-      store: path.join(__dirname, 'data'),
-    }],
-  ],
+    },
+    store: path.join(__dirname, 'data'),
+  },
 };
 ```
 

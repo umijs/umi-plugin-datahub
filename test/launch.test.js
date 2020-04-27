@@ -19,10 +19,9 @@ describe('./test/launch.test.js', () => {
         'dev',
         '--port',
         port,
-        '--cwd',
-        path.join(__dirname, './fixture'),
       ],
       {
+        cwd: path.join(__dirname, './fixture'),
         env: {
           ...process.env,
           BROWSER: 'none',

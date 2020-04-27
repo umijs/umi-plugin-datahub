@@ -25,10 +25,10 @@
     "antd": "4.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "umi": "2.x || ^2.9.0-0"
+    "umi": "3.x"
   },
   "dependencies": {
-    "datahub-proxy-middleware": "3",
+    "datahub-proxy-middleware": "4.x",
     "macaca-datahub": "3",
     "yargs-parser": "^16.1.0"
   },
@@ -48,7 +48,7 @@
     "mocha": "^6.2.2",
     "np": "^5.2.1",
     "puppeteer": "^2.0.0",
-    "umi": "^2.12.6"
+    "umi": "3.x"
   },
   "files": [
     "index.js",

@@ -2,54 +2,8 @@
 
 const path = require('path');
 const DataHub = require('macaca-datahub');
-const pathToRegexp  = require('path-to-regexp');
-const proxyMiddleware = require('http-proxy-middleware');
+const { getProxyMiddlewares }  = require('datahub-proxy-middleware');
 const yargs = require('yargs-parser');
-
-function getMiddlewares(options) {
-  const middlewares = [];
-
-  // serve debugger-board.js
-  if (options.showBoard) {
-    const express = require('express');
-    const staticDir = path.resolve(require.resolve('debugger-board'), '..', 'dist');
-
-    middlewares.push(express.static(staticDir));
-  }
-
-  // generate middleware for each proxy path
-  Object.keys(options.proxy).forEach(route => {
-    const config = options.proxy[route];
-    const protocol = config.protocol || options.protocol;
-    const hostname = config.hostname || options.hostname;
-    const port = config.port || options.port;
-    const hub = config.hub || options.hub;
-    const changeOrigin = config.changeOrigin || options.changeOrigin;
-    const rewrite = config.rewrite || options.rewrite || '^/';
-    const target = `${protocol}://${hostname}:${port}`;
-    const regexp = pathToRegexp(route, null, { end: false });
-    const proxy = proxyMiddleware({
-      target,
-      changeOrigin,
-      logLevel: 'error',
-      pathRewrite: {
-        [rewrite]: `/data/${hub}/`,
-      },
-    });
-
-    middlewares.push((req, res, next) => {
-      if (regexp.exec(req.url)) {
-        // proxy to datahub if path matched
-        proxy(req, res, next);
-      } else {
-        // else do nothing
-        next();
-      }
-    });
-  });
-
-  return middlewares;
-}
 
 module.exports = (api) => {
   const { logger: { debug } } = api;
@@ -59,9 +13,6 @@ module.exports = (api) => {
     store: path.join(__dirname, 'data'),
     proxy: {},
     showBoard: false,
-    protocol: 'http',
-    hub: 'default',
-    changeOrigin: false,
     ...api.userConfig.datahub,
   };
   const isBigfish = Boolean(process.env.BIGFISH_VERSION);
@@ -84,10 +35,10 @@ module.exports = (api) => {
       },
     },
   });
-  
+
   if (!isBigfish || args.datahub) {
     // push datahub middlewares
-    api.addMiddewares(() => getMiddlewares(datahubConfig));
+    api.addMiddewares(() => getProxyMiddlewares(datahubConfig));
 
     // start datahub server
     api.onStart(() => {
@@ -121,7 +72,7 @@ module.exports = (api) => {
     //       break;
     //   }
     // });
-    
+
     // api.addUIPlugin(require.resolve('./dist/index.umd'));
   }
 };

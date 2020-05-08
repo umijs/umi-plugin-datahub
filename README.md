@@ -17,6 +17,7 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![node version][node-image]][node-url]
+[![umi version][umi-image]][umi-url]
 [![npm download][download-image]][download-url]
 
 [npm-image]: https://img.shields.io/npm/v/umi-plugin-datahub.svg?style=flat-square&logo=npm
@@ -25,6 +26,8 @@
 [travis-url]: https://travis-ci.org/umijs/umi-plugin-datahub
 [node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square&logo=node.js
 [node-url]: http://nodejs.org/download/
+[umi-image]: https://img.shields.io/badge/umi-%3E=_3-green.svg?style=flat-square
+[umi-url]: https://github.com/umijs/umi
 [download-image]: https://img.shields.io/npm/dm/umi-plugin-datahub.svg?style=flat-square&logo=npm
 [download-url]: https://npmjs.org/package/umi-plugin-datahub
 

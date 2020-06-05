@@ -36,7 +36,7 @@ module.exports = (api) => {
     },
   });
 
-  if (!isBigfish || args.datahub) {
+  if ((!isBigfish || args.datahub) && process.env.NODE_ENV === 'development') {
     // push datahub middlewares
     api.addMiddewares(() => getProxyMiddlewares(datahubConfig));
 

@@ -41,11 +41,11 @@ umi plugin for integrating [macaca-datahub](//github.com/macacajs/macaca-datahub
 
 ## Contributors
 
-|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars1.githubusercontent.com/u/35128?v=4" width="100px;"/><br/><sub><b>sorrycc</b></sub>](https://github.com/sorrycc)<br/>|[<img src="https://avatars0.githubusercontent.com/u/5035925?v=4" width="100px;"/><br/><sub><b>PeachScript</b></sub>](https://github.com/PeachScript)<br/>|[<img src="https://avatars2.githubusercontent.com/u/1134658?v=4" width="100px;"/><br/><sub><b>tudou527</b></sub>](https://github.com/tudou527)<br/>|[<img src="https://avatars3.githubusercontent.com/u/13595509?v=4" width="100px;"/><br/><sub><b>ycjcl868</b></sub>](https://github.com/ycjcl868)<br/>|
-| :---: | :---: | :---: | :---: | :---: |
+|[<img src="https://avatars.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars.githubusercontent.com/u/35128?v=4" width="100px;"/><br/><sub><b>sorrycc</b></sub>](https://github.com/sorrycc)<br/>|[<img src="https://avatars.githubusercontent.com/u/5035925?v=4" width="100px;"/><br/><sub><b>PeachScript</b></sub>](https://github.com/PeachScript)<br/>|[<img src="https://avatars.githubusercontent.com/u/52845048?v=4" width="100px;"/><br/><sub><b>snapre</b></sub>](https://github.com/snapre)<br/>|[<img src="https://avatars.githubusercontent.com/u/1134658?v=4" width="100px;"/><br/><sub><b>tudou527</b></sub>](https://github.com/tudou527)<br/>|[<img src="https://avatars.githubusercontent.com/u/13595509?v=4" width="100px;"/><br/><sub><b>ycjcl868</b></sub>](https://github.com/ycjcl868)<br/>|
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Thu Jan 02 2020 22:11:29 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Wed Nov 03 2021 00:03:37 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 

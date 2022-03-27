@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-datahub",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/umijs/umi-plugin-datahub"
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "datahub-proxy-middleware": "4.x",
-    "macaca-datahub": "4",
+    "macaca-datahub": "^4.1.0",
     "yargs-parser": "^16.1.0"
   },
   "devDependencies": {
